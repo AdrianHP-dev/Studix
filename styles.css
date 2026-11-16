@@ -1,0 +1,158 @@
+:root{
+    --primary-color: #1C1A24; /* Color de fondo de la página */
+    --secondary-color: #270058; /* Color de los bordes y sombras */
+    --tertiary-color: #7825EA; /* Color de los botones */
+    --quaternary-color: #FF469D; /* Color del texto secundario */
+}
+
+body{
+    color: white;
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #312F39;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(201, 30, 178, 0.2);
+}
+
+.estadisticas{
+    display: inline-block;
+    border: 1px black solid;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(201, 30, 178, 0.2);
+}
+
+#Bienvenida{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 30px;
+}
+
+.contenido{
+    width: 50%;
+    text-align: left;
+}
+
+#Iniciar-Sesion{
+    font-size: 16px;
+    background-color: var(--tertiary-color);
+    color: white;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(153, 0, 255, 0.5);
+}
+
+#Crear-Cuenta{
+    font-size: 16px;
+    background-color:#474550;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgb(69, 65, 71);
+}
+
+.Prueba-Rapida{
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #474550;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(201, 30, 178, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+#Preguntas{
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #312F39;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    padding: 5%;
+    gap: 30px;
+}
+
+.respuestas{
+    background-color: #474550;
+    color: white;
+    border: 1px solid #312F39;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+}
+
+#Mar{
+    width: fit-content;
+    margin: 0 auto;
+    color: var(--quaternary-color);
+    text-align: center;
+    background-color: #474550;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(201, 30, 178, 0.2);
+    padding: 10px;
+}
+
+.Mecanicas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.Mecanicas-Retencion{
+    margin: 0 auto;
+    color: white;
+    text-align: left;
+    background-color: #312F39;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(201, 30, 178, 0.2);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.Navegacion{
+    background-color: #312F39;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(201, 30, 178, 0.2);
+}
+
+.Links{
+    color: white;
+    text-decoration: none;
+}
