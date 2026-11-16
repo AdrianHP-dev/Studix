@@ -1,6 +1,6 @@
 :root{
     --primary-color: #1C1A24; /* Color de fondo de la página */
-    --secondary-color: #270058; /* Color de los bordes y sombras */
+    --secondary-color: #270058; /* Color de los bordes*/
     --tertiary-color: #7825EA; /* Color de los botones */
     --quaternary-color: #FF469D; /* Color del texto secundario */
 }
@@ -24,11 +24,12 @@ header{
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 15px rgba(201, 30, 178, 0.2);
+    margin-bottom: 30px;
 }
 
 .estadisticas{
     display: inline-block;
-    border: 1px black solid;
+    border: 1px var(--secondary-color) solid;
     border-radius: 15px;
     padding: 10px;
     box-shadow: 0 4px 15px rgba(201, 30, 178, 0.2);
@@ -39,13 +40,10 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px;
-    gap: 30px;
-}
-
-.contenido{
     width: 50%;
     text-align: left;
+    padding: 50px;
+    gap: 30px;
 }
 
 #Iniciar-Sesion{
@@ -75,7 +73,7 @@ header{
     margin: 0 auto;
     text-align: center;
     background-color: #474550;
-    border: 1px solid black;
+    border: 1px solid var(--secondary-color);
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(201, 30, 178, 0.2);
     color: white;
@@ -92,9 +90,9 @@ header{
     margin: 0 auto;
     text-align: center;
     background-color: #312F39;
-    border: 1px solid black;
+    border: 1px solid var(--secondary-color);
     border-radius: 15px;
-    box-shadow: 0 0 15px rgb(0, 0, 0);
+    box-shadow: 0 0 15px rgba(201, 30, 178, 0.2);
     padding: 5%;
     gap: 30px;
 }
@@ -102,7 +100,7 @@ header{
 .respuestas{
     background-color: #474550;
     color: white;
-    border: 1px solid #312F39;
+    border: 1px solid var(--secondary-color);
     border-radius: 15px;
     padding: 10px;
     font-size: 16px;
@@ -115,7 +113,7 @@ header{
     color: var(--quaternary-color);
     text-align: center;
     background-color: #474550;
-    border: 1px solid black;
+    border: 1px solid var(--secondary-color);
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(201, 30, 178, 0.2);
     padding: 10px;
@@ -134,7 +132,7 @@ header{
     color: white;
     text-align: left;
     background-color: #312F39;
-    border: 1px solid black;
+    border: 1px solid var(--secondary-color);
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(201, 30, 178, 0.2);
     padding: 25px;
@@ -155,4 +153,301 @@ header{
 .Links{
     color: white;
     text-decoration: none;
+}
+
+.misiones-diarias{
+    width: fit-content;
+    margin: 0 auto;
+    color: white;
+    text-align: left;
+    background-color: #312F39;
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(201, 30, 178, 0.2);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.progreso{
+    width: fit-content;
+    margin: 0 auto;
+    color: white;
+    text-align: left;
+    background-color: #312F39;
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(201, 30, 178, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+#misiones-completadas{
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #312F39;
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(201, 30, 178, 0.2);
+    padding: 10px;
+    margin: 10px;
+}
+
+.informacion-misiones{
+    width: fit-content;
+    margin: 0 auto;
+    color: white;
+    background-color: #312F39;
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(201, 30, 178, 0.2);
+    padding: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.contenido-mision{
+    display: flex;
+    flex-direction: column;
+}
+
+.completar-mision{
+    font-size: 16px;
+    background-color: var(--tertiary-color);
+    color: white;
+    width: 100px;
+    height: 75px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(153, 0, 255, 0.5);
+}
+
+.recompensas{
+    display: flex;
+    gap: 12px;
+}
+
+.recompensa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 100px;
+    padding: 12px 16px;
+    color: white;
+    background-color: #474550;
+    border: 1px solid var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(201, 30, 178, 0.2);
+}
+
+.recompensa strong{
+    color: var(--quaternary-color);
+    font-size: 20px;
+}
+
+.pagina-perfil{
+    width: min(100% - 40px, 1000px);
+    margin: 0 auto 40px;
+}
+
+.tarjeta-perfil{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+    margin-bottom: 35px;
+    background-color: #312F39;
+    border: 1px solid var(--secondary-color);
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(201, 30, 178, 0.16);
+}
+
+.avatar-perfil{
+    display: grid;
+    flex: 0 0 100px;
+    width: 100px;
+    height: 100px;
+    place-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(135deg, var(--tertiary-color), var(--quaternary-color));
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.datos-perfil{
+    flex: 1;
+    min-width: 0;
+}
+
+.etiqueta-seccion{
+    margin: 0 0 8px;
+    color: var(--quaternary-color);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.datos-perfil h2{
+    margin: 0;
+    font-size: 30px;
+}
+
+.nombre-usuario{
+    margin: 5px 0;
+    color: #c9c6d2;
+}
+
+.fecha-union{
+    margin: 0 0 16px;
+    color: #aaa6b5;
+}
+
+.codigo-usuario{
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin: 0;
+    padding: 8px 12px;
+    color: #d7d4df;
+    background-color: #25232d;
+    border: 1px solid #494652;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.codigo-usuario strong{
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.acciones-perfil{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.boton-perfil{
+    min-width: 155px;
+    padding: 12px 16px;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+.boton-compartir{
+    background-color: var(--tertiary-color);
+    box-shadow: 0 4px 15px rgba(153, 0, 255, 0.3);
+}
+
+.boton-editar{
+    background-color: #474550;
+    border-color: #5a5664;
+}
+
+.boton-perfil:hover{
+    filter: brightness(1.12);
+}
+
+.seccion-estadisticas > h2{
+    margin: 0 0 18px;
+    font-size: 24px;
+}
+
+.estadisticas-perfil{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.tarjeta-estadistica{
+    min-height: 170px;
+    padding: 22px;
+    background-color: #312F39;
+    border: 1px solid var(--secondary-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(201, 30, 178, 0.12);
+}
+
+.etiqueta-estadistica{
+    margin: 0 0 6px;
+    color: #c9c6d2;
+}
+
+.valor-estadistica{
+    margin: 0;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.valor-estadistica span{
+    color: var(--quaternary-color);
+    font-size: 16px;
+}
+
+.puesto-ranking{
+    margin: 6px 0 0;
+    color: #c9c6d2;
+}
+
+.puesto-ranking strong{
+    color: #ffd166;
+}
+
+.enlace-activo{
+    color: var(--quaternary-color);
+    font-weight: bold;
+}
+
+@media (max-width: 700px){
+    .tarjeta-perfil{
+        flex-wrap: wrap;
+        padding: 22px;
+    }
+    .datos-perfil{
+        flex-basis: calc(100% - 125px);
+    }
+    .acciones-perfil{
+        flex-direction: row;
+        width: 100%;
+    }
+    .boton-perfil{
+        flex: 1;
+        min-width: 0;
+    }
+    .estadisticas-perfil{
+        grid-template-columns: 1fr;
+    }
+    .tarjeta-estadistica{
+        min-height: 0;
+    }
+}
+
+@media (max-width: 420px){
+    .avatar-perfil{
+        flex-basis: 76px;
+        width: 76px;
+        height: 76px;
+    }
+    .datos-perfil{
+        flex-basis: calc(100% - 101px);
+    }
+    .datos-perfil h2{
+        font-size: 24px;
+    }
+    .acciones-perfil{
+        flex-direction: column;
+    }
 }
