@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta los primeros lugares del ranking escolar de Studix.">
+    <link rel="stylesheet" href="styles.css">
+    <title> Ranking </title>
+</head>
+<body>
+    <header>
+        <p class="estadisticas" style="color: red;">0 Días</p>
+        <p class="estadisticas" style="color: cyan;">0 Monedas</p>
+        <h1 id="Titulo">Studix</h1>
+    </header>
+    <main class="pagina-ranking">
+        <section class="encabezado-ranking" aria-labelledby="titulo-ranking">
+            <p class="etiqueta-seccion">COMPITE CON TU COMUNIDAD</p>
+            <h2 id="titulo-ranking">Ranking escolar</h2>
+            <p>Descubre quiénes lideran la tabla y sigue sumando experiencia.</p>
+        </section>
+        <section class="selector-escuela" aria-labelledby="titulo-escuela">
+            <div>
+                <p class="etiqueta-seccion">TU ESCUELA</p>
+                <h2 id="titulo-escuela">Selecciona una escuela</h2>
+            </div>
+            <label class="campo-escuela" for="escuela-ranking">
+                Escuela
+                <select id="escuela-ranking" name="escuela">
+                    <option value="cbtis-199">CBTis 199</option>
+                </select>
+            </label>
+        </section>
+        <section class="seccion-podio" aria-labelledby="titulo-podio">
+            <div class="titulo-ranking-seccion">
+                <div>
+                    <p class="etiqueta-seccion">TEMPORADA ACTUAL</p>
+                    <h2 id="titulo-podio">Los primeros lugares</h2>
+                </div>
+                <span class="etiqueta-temporada">Ranking escolar</span>
+            </div>
+            <div class="podio-ranking">
+                <article class="tarjeta-podio podio-segundo">
+                    <span class="medalla-podio" aria-label="Segundo lugar">2</span>
+                    <p class="nombre-podio">Estudiante 02</p>
+                    <p class="nivel-podio">Nivel 18</p>
+                    <p class="puntos-podio"><strong>2,840</strong> XP</p>
+                </article>
+                <article class="tarjeta-podio podio-primero">
+                    <span class="medalla-podio" aria-label="Primer lugar">1</span>
+                    <p class="nombre-podio">Estudiante 01</p>
+                    <p class="nivel-podio">Nivel 22</p>
+                    <p class="puntos-podio"><strong>3,560</strong> XP</p>
+                </article>
+                <article class="tarjeta-podio podio-tercero">
+                    <span class="medalla-podio" aria-label="Tercer lugar">3</span>
+                    <p class="nombre-podio">Estudiante 03</p>
+                    <p class="nivel-podio">Nivel 16</p>
+                    <p class="puntos-podio"><strong>2,410</strong> XP</p>
+                </article>
+            </div>
+        </section>
+        <section class="lista-ranking" aria-labelledby="titulo-lista-ranking">
+            <div class="titulo-ranking-seccion">
+                <div>
+                    <p class="etiqueta-seccion">SIGUIENTES LUGARES</p>
+                    <h2 id="titulo-lista-ranking">Top 5 de la escuela</h2>
+                </div>
+                <span class="contador-ranking">5 estudiantes</span>
+            </div>
+            <ol class="filas-ranking" start="4">
+                <li class="fila-ranking">
+                    <span class="puesto-fila">04</span>
+                    <span class="avatar-ranking" aria-hidden="true">04</span>
+                    <span class="datos-ranking">
+                        <strong>Estudiante 04</strong>
+                        <span>Nivel 14</span>
+                    </span>
+                    <span class="puntos-fila"><strong>2,050</strong> XP</span>
+                </li>
+                <li class="fila-ranking">
+                    <span class="puesto-fila">05</span>
+                    <span class="avatar-ranking" aria-hidden="true">05</span>
+                    <span class="datos-ranking">
+                        <strong>Estudiante 05</strong>
+                        <span>Nivel 12</span>
+                    </span>
+                    <span class="puntos-fila"><strong>1,780</strong> XP</span>
+                </li>
+            </ol>
+            <p class="nota-ranking">Datos de muestra para la vista previa del ranking.</p>
+        </section>
+    </main>
+    <nav class="Navegacion" aria-label="Navegación principal">
+        <a class="Links" href="index.html">Inicio</a>
+        <a class="Links" href="semestres.html">Materias</a>
+        <a class="Links" href="misiones.html">Misiones</a>
+        <a class="Links enlace-activo" href="ranking.html" aria-current="page">Ranking</a>
+        <a class="Links" href="avisos.html">Avisos</a>
+        <a class="Links" href="perfil.html">Perfil</a>
+    </nav>
+</body>
+</html>
