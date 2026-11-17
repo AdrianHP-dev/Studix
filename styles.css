@@ -411,7 +411,199 @@ header{
     font-weight: bold;
 }
 
+.pagina-avisos{
+    width: min(100% - 40px, 1000px);
+    margin: 0 auto 40px;
+}
+
+.encabezado-avisos{
+    margin-bottom: 28px;
+}
+
+.encabezado-avisos h2,
+.encabezado-panel-avisos h2,
+.titulo-lista-avisos h2{
+    margin: 0;
+    font-size: 26px;
+}
+
+.encabezado-avisos > p:last-child,
+.ayuda-avisos{
+    color: #c9c6d2;
+}
+
+.panel-avisos{
+    padding: 26px;
+    margin-bottom: 24px;
+    background-color: #312F39;
+    border: 1px solid var(--secondary-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(201, 30, 178, 0.12);
+}
+
+.encabezado-panel-avisos,
+.titulo-lista-avisos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.insignia-aviso,
+.etiqueta-publicacion{
+    padding: 7px 10px;
+    color: #f3d9ff;
+    background-color: rgba(120, 37, 234, 0.2);
+    border: 1px solid rgba(120, 37, 234, 0.55);
+    border-radius: 999px;
+    font-size: 13px;
+}
+
+.formulario-avisos{
+    display: grid;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.campos-aviso{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.formulario-avisos label{
+    display: grid;
+    gap: 8px;
+    color: #e4e1eb;
+    font-weight: bold;
+}
+
+.formulario-avisos input,
+.formulario-avisos select,
+.formulario-avisos textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    color: white;
+    font: inherit;
+    background-color: #25232d;
+    border: 1px solid #55515f;
+    border-radius: 10px;
+}
+
+.formulario-avisos select option{
+    color: white;
+    background-color: #25232d;
+}
+
+.formulario-avisos textarea{
+    min-height: 110px;
+    resize: vertical;
+}
+
+.formulario-avisos input:focus,
+.formulario-avisos select:focus,
+.formulario-avisos textarea:focus{
+    outline: 2px solid var(--quaternary-color);
+    outline-offset: 2px;
+}
+
+.formulario-avisos ::placeholder{
+    color: #aaa6b5;
+}
+
+.acciones-formulario-avisos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.estado-formulario{
+    margin: 0;
+    color: #a7f3c1;
+}
+
+.boton-avisos{
+    padding: 12px 18px;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    background-color: var(--tertiary-color);
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(153, 0, 255, 0.3);
+    cursor: pointer;
+}
+
+.boton-avisos:hover{
+    filter: brightness(1.12);
+}
+
+.lista-avisos{
+    margin-top: 36px;
+}
+
+.aviso-vacio{
+    padding: 22px;
+    color: #c9c6d2;
+    text-align: center;
+    background-color: #312F39;
+    border: 1px dashed #55515f;
+    border-radius: 14px;
+}
+
+.publicaciones-avisos{
+    display: grid;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.tarjeta-publicacion{
+    padding: 20px;
+    background-color: #312F39;
+    border: 1px solid var(--secondary-color);
+    border-radius: 14px;
+}
+
+.metadatos-publicacion{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.autor-publicacion{
+    color: #c9c6d2;
+    font-size: 13px;
+}
+
+.titulo-publicacion{
+    margin: 14px 0 8px;
+    font-size: 20px;
+}
+
+.contenido-publicacion{
+    margin: 12px 0;
+    color: #e4e1eb;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.fecha-publicacion{
+    margin: 8px 0 0;
+    color: #aaa6b5;
+    font-size: 13px;
+}
+
 @media (max-width: 700px){
+    .campos-aviso{
+        grid-template-columns: 1fr;
+    }
+    .encabezado-panel-avisos{
+        align-items: flex-start;
+        flex-direction: column;
+    }
     .tarjeta-perfil{
         flex-wrap: wrap;
         padding: 22px;
@@ -436,6 +628,16 @@ header{
 }
 
 @media (max-width: 420px){
+    .pagina-avisos{
+        width: min(100% - 24px, 1000px);
+    }
+    .panel-avisos{
+        padding: 18px;
+    }
+    .acciones-formulario-avisos{
+        align-items: stretch;
+        flex-direction: column;
+    }
     .avatar-perfil{
         flex-basis: 76px;
         width: 76px;

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta avisos escolares y comparte tus dudas o reportes con la comunidad Studix.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Avisos | Studix</title>
+</head>
+<body>
+    <header>
+        <p class="estadisticas" style="color: red;">0 Días</p>
+        <p class="estadisticas" style="color: cyan;">0 Monedas</p>
+        <h1 id="Titulo">Studix</h1>
+    </header>
+    <main class="pagina-avisos">
+        <section class="encabezado-avisos" aria-labelledby="titulo-avisos">
+            <p class="etiqueta-seccion">COMUNIDAD STUDIX</p>
+            <h2 id="titulo-avisos">Avisos y comunidad</h2>
+            <p>Entérate de eventos y fechas importantes, o comparte una duda con tus compañeros.</p>
+        </section>
+
+        <section class="panel-avisos" aria-labelledby="titulo-publicar-aviso">
+            <div class="encabezado-panel-avisos">
+                <div>
+                    <p class="etiqueta-seccion">PARA DOCENTES</p>
+                    <h2 id="titulo-publicar-aviso">Publicar un aviso</h2>
+                </div>
+                <span class="insignia-aviso">Eventos y exámenes</span>
+            </div>
+            <form id="formulario-aviso" class="formulario-avisos">
+                <div class="campos-aviso">
+                    <label>
+                        Tipo de aviso
+                        <select name="tipo" required>
+                            <option value="Evento">Evento</option>
+                            <option value="Fecha de examen">Fecha de examen</option>
+                            <option value="Aviso general">Aviso general</option>
+                        </select>
+                    </label>
+                    <label>
+                        Fecha
+                        <input name="fecha" type="date">
+                    </label>
+                </div>
+                <label>
+                    Título
+                    <input name="titulo" type="text" maxlength="100" placeholder="Ej. Examen de Matemáticas" required>
+                </label>
+                <label>
+                    Detalles
+                    <textarea name="contenido" rows="4" maxlength="1000" placeholder="Agrega la información que necesitan saber los alumnos..." required></textarea>
+                </label>
+                <div class="acciones-formulario-avisos">
+                    <p id="estado-aviso" class="estado-formulario" role="status" aria-live="polite"></p>
+                    <button class="boton-avisos" type="submit">Publicar aviso</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="panel-avisos" aria-labelledby="titulo-mensaje-alumnos">
+            <div class="encabezado-panel-avisos">
+                <div>
+                    <p class="etiqueta-seccion">PARA ALUMNOS</p>
+                    <h2 id="titulo-mensaje-alumnos">¿Tienes una duda o encontraste algo?</h2>
+                </div>
+            </div>
+            <p class="ayuda-avisos">Comparte una pregunta o reporta un objeto perdido para que la comunidad pueda ayudarte.</p>
+            <form id="formulario-mensaje" class="formulario-avisos">
+                <label>
+                    ¿Qué quieres compartir?
+                    <select name="tipo" required>
+                        <option value="Duda">Tengo una duda</option>
+                        <option value="Objeto perdido">Reportar un objeto perdido</option>
+                        <option value="Otro">Otro mensaje</option>
+                    </select>
+                </label>
+                <label>
+                    Tu mensaje
+                    <textarea name="contenido" rows="4" maxlength="1000" placeholder="Escribe tu duda o describe el objeto y dónde lo viste..." required></textarea>
+                </label>
+                <div class="acciones-formulario-avisos">
+                    <p id="estado-mensaje" class="estado-formulario" role="status" aria-live="polite"></p>
+                    <button class="boton-avisos" type="submit">Compartir mensaje</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="lista-avisos" aria-labelledby="titulo-lista-avisos">
+            <div class="titulo-lista-avisos">
+                <div>
+                    <p class="etiqueta-seccion">LO MÁS RECIENTE</p>
+                    <h2 id="titulo-lista-avisos">Avisos y mensajes</h2>
+                </div>
+            </div>
+            <p id="lista-vacia" class="aviso-vacio">Todavía no hay publicaciones. ¡Sé el primero en compartir!</p>
+            <div id="publicaciones-avisos" class="publicaciones-avisos" aria-live="polite"></div>
+        </section>
+    </main>
+    <nav class="Navegacion" aria-label="Navegación principal">
+        <a class="Links" href="index.html">Inicio</a>
+        <a class="Links" href="">Materias</a>
+        <a class="Links" href="misiones.html">Misiones</a>
+        <a class="Links" href="">Ranking</a>
+        <a class="Links" href="">Docentes</a>
+        <a class="Links enlace-activo" href="avisos.html" aria-current="page">Avisos</a>
+        <a class="Links" href="perfil.html">Perfil</a>
+    </nav>
+    <script>
+        (function () {
+            const claveAvisos = "studix-avisos";
+            const claveMensajes = "studix-mensajes";
+            const publicaciones = document.getElementById("publicaciones-avisos");
+            const listaVacia = document.getElementById("lista-vacia");
+
+            function leerPublicaciones(clave) {
+                const guardado = localStorage.getItem(clave);
+                if (!guardado) {
+                    return [];
+                }
+
+                const datos = JSON.parse(guardado);
+                if (!Array.isArray(datos)) {
+                    throw new Error("El formato de las publicaciones guardadas no es válido.");
+                }
+                return datos;
+            }
+
+            function crearTexto(etiqueta, texto, clase) {
+                const elemento = document.createElement(etiqueta);
+                if (clase) {
+                    elemento.className = clase;
+                }
+                elemento.textContent = texto;
+                return elemento;
+            }
+
+            function mostrarPublicaciones() {
+                const avisos = leerPublicaciones(claveAvisos).map(function (aviso) {
+                    return Object.assign({ categoria: "Docente" }, aviso);
+                });
+                const mensajes = leerPublicaciones(claveMensajes).map(function (mensaje) {
+                    return Object.assign({ categoria: "Alumno" }, mensaje);
+                });
+                const elementos = avisos.concat(mensajes).sort(function (a, b) {
+                    return b.creado - a.creado;
+                });
+
+                publicaciones.replaceChildren();
+                listaVacia.hidden = elementos.length > 0;
+                elementos.forEach(function (item) {
+                    const tarjeta = document.createElement("article");
+                    tarjeta.className = "tarjeta-publicacion";
+                    const metadatos = document.createElement("div");
+                    metadatos.className = "metadatos-publicacion";
+                    metadatos.append(
+                        crearTexto("span", item.tipo, "etiqueta-publicacion"),
+                        crearTexto("span", item.categoria, "autor-publicacion")
+                    );
+                    tarjeta.append(metadatos);
+
+                    if (item.titulo) {
+                        tarjeta.append(crearTexto("h3", item.titulo, "titulo-publicacion"));
+                    }
+                    tarjeta.append(crearTexto("p", item.contenido, "contenido-publicacion"));
+                    if (item.fecha) {
+                        const fecha = new Date(item.fecha + "T00:00:00");
+                        tarjeta.append(crearTexto("p", "Fecha: " + fecha.toLocaleDateString("es-MX", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric"
+                        }), "fecha-publicacion"));
+                    }
+                    tarjeta.append(crearTexto("p", new Date(item.creado).toLocaleString("es-MX"), "fecha-publicacion"));
+                    publicaciones.append(tarjeta);
+                });
+            }
+
+            function guardarPublicacion(formulario, clave, estado, incluirTitulo) {
+                formulario.addEventListener("submit", function (evento) {
+                    evento.preventDefault();
+                    const datos = new FormData(formulario);
+                    const nuevaPublicacion = {
+                        tipo: datos.get("tipo"),
+                        contenido: datos.get("contenido").trim(),
+                        creado: Date.now()
+                    };
+                    if (incluirTitulo) {
+                        nuevaPublicacion.titulo = datos.get("titulo").trim();
+                        nuevaPublicacion.fecha = datos.get("fecha");
+                    }
+                    if (!nuevaPublicacion.contenido || (incluirTitulo && !nuevaPublicacion.titulo)) {
+                        estado.textContent = "Completa los campos obligatorios antes de publicar.";
+                        return;
+                    }
+
+                    try {
+                        const existentes = leerPublicaciones(clave);
+                        existentes.unshift(nuevaPublicacion);
+                        localStorage.setItem(clave, JSON.stringify(existentes));
+                        mostrarPublicaciones();
+                        formulario.reset();
+                        estado.textContent = "Tu publicación se compartió correctamente.";
+                    } catch (error) {
+                        estado.textContent = "No se pudo guardar la publicación. Inténtalo de nuevo.";
+                    }
+                });
+            }
+
+            guardarPublicacion(
+                document.getElementById("formulario-aviso"),
+                claveAvisos,
+                document.getElementById("estado-aviso"),
+                true
+            );
+            guardarPublicacion(
+                document.getElementById("formulario-mensaje"),
+                claveMensajes,
+                document.getElementById("estado-mensaje"),
+                false
+            );
+
+            try {
+                mostrarPublicaciones();
+            } catch (error) {
+                listaVacia.textContent = "No se pudieron cargar las publicaciones guardadas en este navegador.";
+            }
+        }());
+    </script>
+</body>
+</html>
