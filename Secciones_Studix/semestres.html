@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Selecciona uno de los seis semestres disponibles en Studix.">
-    <link rel="stylesheet" href="styles.css">
-    <title> Semestres </title>
+    <link rel="stylesheet" href="../Estilos/styles.css">
+    <title> Semestres | Studix </title>
 </head>
 <body>
     <header>
         <p class="estadisticas" style="color: red;">0 Días</p>
         <p class="estadisticas" style="color: cyan;">0 Monedas</p>
-        <h1 id="Titulo">Studix</h1>
+        <h1 id="Titulo"> Studix </h1>
     </header>
     <main class="pagina-semestres">
         <section class="encabezado-semestres" aria-labelledby="titulo-semestres">
-            <p class="etiqueta-seccion">TU RUTA ACADÉMICA</p>
-            <h2 id="titulo-semestres">Elige tu semestre</h2>
-            <p>Selecciona un semestre para ver tu ruta. Los semestres pares e impares se activan por separado.</p>
+            <p class="etiqueta-seccion"> TU RUTA ACADÉMICA </p>
+            <h2 id="titulo-semestres"> Elige tu semestre </h2>
+            <p> Selecciona un semestre para ver tu ruta. Los semestres pares e impares se activan por separado. </p>
         </section>
         <form class="selector-semestres">
             <fieldset class="grupo-semestres">
-                <legend class="texto-leyenda-semestres">Semestres disponibles</legend>
+                <legend class="texto-leyenda-semestres"> Semestres disponibles </legend>
                 <input class="radio-semestre" type="radio" name="semestre" id="semestre-1" value="1">
                 <input class="radio-semestre" type="radio" name="semestre" id="semestre-2" value="2">
                 <input class="radio-semestre" type="radio" name="semestre" id="semestre-3" value="3">
@@ -30,65 +30,65 @@
                 <input class="radio-semestre" type="radio" name="semestre" id="semestre-6" value="6">
                 <div class="cuadricula-semestres">
                     <label class="tarjeta-semestre semestre-1" for="semestre-1">
-                        <span class="numero-semestre">01</span>
-                        <span class="nombre-semestre">Primer semestre</span>
+                        <span class="numero-semestre"> 01 </span>
+                        <span class="nombre-semestre"> Primer semestre </span>
                         <span class="estado-semestre"></span>
                     </label>
                     <label class="tarjeta-semestre semestre-2" for="semestre-2">
-                        <span class="numero-semestre">02</span>
-                        <span class="nombre-semestre">Segundo semestre</span>
+                        <span class="numero-semestre"> 02 </span>
+                        <span class="nombre-semestre"> Segundo semestre </span>
                         <span class="estado-semestre"></span>
                     </label>
                     <label class="tarjeta-semestre semestre-3" for="semestre-3">
-                        <span class="numero-semestre">03</span>
-                        <span class="nombre-semestre">Tercer semestre</span>
+                        <span class="numero-semestre"> 03 </span>
+                        <span class="nombre-semestre"> Tercer semestre </span>
                         <span class="estado-semestre"></span>
                     </label>
                     <label class="tarjeta-semestre semestre-4" for="semestre-4">
-                        <span class="numero-semestre">04</span>
-                        <span class="nombre-semestre">Cuarto semestre</span>
+                        <span class="numero-semestre"> 04 </span>
+                        <span class="nombre-semestre"> Cuarto semestre </span>
                         <span class="estado-semestre"></span>
                     </label>
                     <label class="tarjeta-semestre semestre-5" for="semestre-5">
-                        <span class="numero-semestre">05</span>
-                        <span class="nombre-semestre">Quinto semestre</span>
+                        <span class="numero-semestre"> 05 </span>
+                        <span class="nombre-semestre"> Quinto semestre </span>
                         <span class="estado-semestre"></span>
                     </label>
                     <label class="tarjeta-semestre semestre-6" for="semestre-6">
-                        <span class="numero-semestre">06</span>
-                        <span class="nombre-semestre">Sexto semestre</span>
+                        <span class="numero-semestre"> 06 </span>
+                        <span class="nombre-semestre"> Sexto semestre </span>
                         <span class="estado-semestre"></span>
                     </label>
                 </div>
-                <p class="nota-semestres">Al seleccionar un semestre impar se desactivan los pares, y viceversa. Usa “Cambiar selección” para elegir otro grupo.</p>
+                <p class="nota-semestres"> Al seleccionar un semestre impar se desactivan los pares, y viceversa. Usa “Cambiar selección” para elegir otro grupo. </p>
                 <div class="acciones-semestres">
-                    <a class="boton-ver-materias" href="#materias-semestre">Ver materias de este semestre</a>
+                    <a class="boton-ver-materias" href="#materias-semestre"> Ver materias de este semestre </a>
                     <button class="boton-limpiar-semestre" type="reset">Cambiar selección</button>
                 </div>
             </fieldset>
             <section id="materias-semestre" class="panel-materias" tabindex="-1" aria-labelledby="titulo-materias">
-                <p class="etiqueta-seccion">CATÁLOGO PROVISIONAL</p>
+                <p class="etiqueta-seccion"> CATÁLOGO PROVISIONAL </p>
                 <h2 id="titulo-materias">
                     Materias del
-                    <span class="semestre-actual semestre-actual-1">primer semestre</span>
-                    <span class="semestre-actual semestre-actual-2">segundo semestre</span>
-                    <span class="semestre-actual semestre-actual-3">tercer semestre</span>
-                    <span class="semestre-actual semestre-actual-4">cuarto semestre</span>
-                    <span class="semestre-actual semestre-actual-5">quinto semestre</span>
-                    <span class="semestre-actual semestre-actual-6">sexto semestre</span>
+                    <span class="semestre-actual semestre-actual-1"> primer semestre </span>
+                    <span class="semestre-actual semestre-actual-2"> segundo semestre </span>
+                    <span class="semestre-actual semestre-actual-3"> tercer semestre </span>
+                    <span class="semestre-actual semestre-actual-4"> cuarto semestre </span>
+                    <span class="semestre-actual semestre-actual-5"> quinto semestre </span>
+                    <span class="semestre-actual semestre-actual-6"> sexto semestre </span>
                 </h2>
-                <p class="nota-materias">Estas son las materias de ejemplo que se imparten en el semestre seleccionado.</p>
+                <p class="nota-materias"> Estas son las materias de ejemplo que se imparten en el semestre seleccionado. </p>
                 <ul class="lista-materias">
-                    <li>Matemáticas</li>
-                    <li>Lenguajes</li>
-                    <li>Inglés</li>
+                    <li><a class="enlace-materia" href="../Niveles_explicaciones_Matematicas/niveles_matematicas.html">Matemáticas</a></li>
+                    <li><a class="enlace-materia" href="../Niveles_explicaciones_Lenguajes/niveles_lenguajes.html">Lenguajes</a></li>
+                    <li><a class="enlace-materia" href="../Niveles_explicaciones_Ingles/niveles_ingles.html">Inglés</a></li>
                 </ul>
             </section>
         </form>
     </main>
     <nav class="Navegacion" aria-label="Navegación principal">
-        <a class="Links" href="index.html">Inicio</a>
-        <a class="Links enlace-activo" href="semestres.html" aria-current="page">Materias</a>
+        <a class="Links" href="../index.html">Inicio</a>
+        <a class="Links enlace-activo" href="semestres.html" aria-current="page">Semestres</a>
         <a class="Links" href="misiones.html">Misiones</a>
         <a class="Links" href="ranking.html">Ranking</a>
         <a class="Links" href="avisos.html">Avisos</a>

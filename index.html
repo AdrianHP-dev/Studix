@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name = "description" content = "Studix es una plataforma de aprendizaje en línea que ofrece cursos interactivos y recursos educativos para estudiantes.">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Estilos/styles.css">
     <title> Studix </title>
 </head>
 <body>
@@ -18,9 +18,11 @@
             <p> PLATAFORMA ACADÉMICA </p>
             <h1> ¡Aprende, sube de nivel y conquista tus materias! </h1>
             <p> Convierte tus materias en una aventura diaria de recompensas, competencia entre alumnos y misiones interactivas. </p>
-            <button id = "Iniciar-Sesion" onclick = "window.location.href='login.html'"> Iniciar sesión </button>
-            <button id = "Crear-Cuenta" onclick = "window.location.href='register.html'"> Crear cuenta </button>
-            <p> ¿PREFIERES EXPLORAR ANTES? <a style = "color: cyan;" href="demo.html"> JUGAR UNA LECCIÓN DEMO GRATIS -> </a></p>
+            <div class="acciones-bienvenida">
+                <a id="Iniciar-Sesion" href="Cuenta_Studix/login.html">Iniciar sesión</a>
+                <a id="Crear-Cuenta" href="Cuenta_Studix/register.html">Crear cuenta</a>
+            </div>
+            <p> ¿PREFIERES EXPLORAR ANTES? <a style="color: cyan;" href="Leccion_Demo/demo.html">JUGAR UNA LECCIÓN DEMO GRATIS -></a></p>
         </div>
     </section>
     <section class = "Prueba-Rapida"> 
@@ -49,12 +51,12 @@
         </section>
     </div>
     <nav class = "Navegacion">
-        <a class = "Links" href = "index.html"> Inico </a>
-        <a class = "Links" href = "semestres.html"> Materias </a>
-        <a class = "Links" href = "misiones.html"> Misiones </a>
-        <a class = "Links" href = "ranking.html"> Ranking </a>
-        <a class = "Links" href = "avisos.html"> Avisos </a>
-        <a class = "Links" href = "perfil.html"> Perfil </a>
+        <a class = "Links" href = "index.html"> Inicio </a>
+        <a class = "Links" href = "Secciones_Studix/semestres.html"> Semestres </a>
+        <a class = "Links" href = "Secciones_Studix/misiones.html"> Misiones </a>
+        <a class = "Links" href = "Secciones_Studix/ranking.html"> Ranking </a>
+        <a class = "Links" href = "Secciones_Studix/avisos.html"> Avisos </a>
+        <a class = "Links" href = "Secciones_Studix/perfil.html"> Perfil </a>
     </nav>
 </body>
 </html>
